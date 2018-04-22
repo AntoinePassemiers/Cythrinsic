@@ -1,4 +1,4 @@
-# Cythintrin
+# Cythrinsic
 
 ## Header files for allowing Intel intrinsics in Cython
 
