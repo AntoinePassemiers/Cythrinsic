@@ -4,15 +4,22 @@
 cimport numpy as cnp
 
 ctypedef cnp.int64_t __int64
+ctypedef cnp.uint64_t unsigned __int64
+ctypedef cnp.int16_t __int16
+ctypedef cnp.int8_t __int8
+
+ctypedef unsigned short __mmask16
 
 cdef extern from "mmintrin.h":
 
 	ctypedef long long __m64
+	ctypedef int __m64_u
 
-	ctypedef long long __v1di
 	ctypedef int __v2si
 	ctypedef short __v4hi
 	ctypedef char __v8qi
+	ctypedef long long __v1di
+	ctypedef float __v2sf
 
 	__m64    _mm_add_pi16 (__m64 a, __m64 b) nogil
 	__m64    _mm_add_pi32 (__m64 a, __m64 b) nogil

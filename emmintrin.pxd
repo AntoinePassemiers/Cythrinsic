@@ -19,6 +19,13 @@ cdef extern from "emmintrin.h":
 
 	ctypedef signed char __v16qs
 
+	ctypedef long long __m128i
+	ctypedef double __m128d
+
+	ctypedef long long __m128i_u
+	ctypedef double __m128d_u
+	
+
 	__m128i  _mm_add_epi16 (__m128i a, __m128i b) nogil
 	__m128i  _mm_add_epi32 (__m128i a, __m128i b) nogil
 	__m128i  _mm_add_epi64 (__m128i a, __m128i b) nogil

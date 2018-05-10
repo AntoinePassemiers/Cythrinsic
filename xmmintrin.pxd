@@ -11,6 +11,15 @@ cdef extern from "xmmintrin.h":
 
 	ctypedef unsigned int __v4su
 
+	cdef enum _mm_hint:
+		_MM_HINT_ET0
+		_MM_HINT_ET1
+		_MM_HINT_T0
+		_MM_HINT_T1
+		_MM_HINT_T2
+		_MM_HINT_NTA
+
+
 	__m128   _mm_add_ps (__m128 a, __m128 b) nogil
 	__m128   _mm_add_ss (__m128 a, __m128 b) nogil
 

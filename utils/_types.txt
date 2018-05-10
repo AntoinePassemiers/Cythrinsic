@@ -1,0 +1,51 @@
+__int64
+_m512i
+_MM_SWIZZLE_ENUM
+_MM_BROADCAST64_ENUM
+_MM_EXP_ADJ_ENUM
+__m256d
+__m512i
+_MM_DOWNCONV_EPI32_ENUM
+__m128i*
+unsigned __int64 *
+__m512
+__m64
+_MM_UPCONV_EPI32_ENUM
+_MM_BROADCAST32_ENUM
+__m128d *
+__m512d *
+__int32
+__mmask8
+_mmask16
+_MM_UPCONV_PD_ENUM
+__m128 *
+_m128i *
+unsigned __int64*
+__m128
+__mmask16 *
+__mmask64
+__m256
+__m512d
+const _MM_CMPINT_ENUM
+__int8
+__m128i *
+_MM_PERM_ENUM
+__m256i *
+__mmask32
+_MM_MANTISSA_SIGN_ENUM
+_MM_DOWNCONV_PS_ENUM
+_MM_DOWNCONV_PD_ENUM
+__m128d
+_MM_UPCONV_PS_ENUM
+__m256 *
+__m128i
+__m256i
+_MM_MANTISSA_NORM_ENUM
+__int16
+_MM_DOWNCONV_EPI64_ENUM
+__mmask16
+__m64*
+__m256d *
+__m512 *
+_m512
+_MM_UPCONV_EPI64_ENUM

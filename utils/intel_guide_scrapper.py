@@ -21,7 +21,7 @@ def get_intrinsics():
         "immintrin": [],
         "wmmintrin": []
     }
-    with open("../html/guide.html", "r",encoding="utf8") as f:
+    with open("html/guide.html", "r",encoding="utf8") as f:
         soup = BeautifulSoup(f.read(), "lxml")
         intrinsic_cat = re.compile(r'intrinsic [^"]*')
         intrinsics = soup.find_all("div", class_=intrinsic_cat)
@@ -34,6 +34,7 @@ def get_intrinsics():
 
 
 def generate_header_files(intrinsics_by_cat):
+    types = set()
     for cat in intrinsics_by_cat:
         with open("templates/%s.pxd" % cat, "r") as f:
             template = f.read()
@@ -42,8 +43,11 @@ def generate_header_files(intrinsics_by_cat):
             last_op_name = "-"
             for intrinsic in intrinsics_by_cat[cat]:
                 rettype = intrinsic.find("span", class_="rettype")
+                types.add(rettype.text)
                 name = intrinsic.find("span", class_="name")
                 param_types = intrinsic.find_all("span", class_="param_type")
+                for param_type in param_types:
+                    types.add(param_type.text)
                 param_names = intrinsic.find_all("span", class_="param_name")
 
                 if len(param_names) > 0:
@@ -77,6 +81,9 @@ def generate_header_files(intrinsics_by_cat):
                     last_op_name = op_name
                 
                 f.write("\t%s\n" % signature)
+    with open("types.txt", "w") as f:
+        for t in types:
+            f.write("%s\n" % t)
 
 
 if __name__ == "__main__":
