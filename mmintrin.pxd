@@ -4,7 +4,7 @@
 cimport numpy as cnp
 
 ctypedef cnp.int64_t __int64
-ctypedef cnp.uint64_t unsigned __int64
+#ctypedef cnp.uint64_t  unsigned __int64
 ctypedef cnp.int16_t __int16
 ctypedef cnp.int8_t __int8
 
